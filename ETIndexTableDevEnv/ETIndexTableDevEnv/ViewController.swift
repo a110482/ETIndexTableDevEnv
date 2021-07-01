@@ -48,6 +48,10 @@ class ViewController: UIViewController {
         binder = ETIndexBinder(
             indexTableViewController: indexTableViewController,
             dataTableViewController: dataTableViewController)
+        
+        var config = ETIndexBinderConfig()
+        config.pagingBehaver = .whthCellMedium
+        binder?.setup(config: config)
     }
 }
 

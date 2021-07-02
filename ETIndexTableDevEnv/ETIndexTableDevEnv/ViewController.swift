@@ -13,13 +13,7 @@ class ViewController: UIViewController {
     let dataTableViewController = MyETDataTableViewController()
     let indexTableViewController = MyETIndexTAbleViewcontroller()
     
-    let demoModel = [
-        ["A_0", "A_1", "A_2", "A_3"],
-        ["B_0", "B_1",],
-        ["C_0", "C_1", "C_2",],
-        ["D_0", "D_1", "D_2", "D_3"],
-        ["E_0", "E_1",],
-    ]
+    let demoModel = DemoModel.demoModel_1
     open var binder: ETIndexBinder?
     
     override func viewDidLoad() {
@@ -32,6 +26,7 @@ class ViewController: UIViewController {
             $0.left.bottom.equalToSuperview()
             $0.width.equalToSuperview().multipliedBy(0.7)
         }
+        dataTableViewController.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 700, right: 0)
 
         addChild(indexTableViewController)
         view.addSubview(indexTableViewController.view)
@@ -50,13 +45,13 @@ class ViewController: UIViewController {
             dataTableViewController: dataTableViewController)
         
         var config = ETIndexBinderConfig()
-        config.pagingBehaver = .whthCellMedium
+        config.pagingBehaver = .withCellMedium
         binder?.setup(config: config)
     }
 }
 
 
-// MARK: -
+// MARK: - Data Table
 
 class MyETDataTableViewController: ETDataTableViewController {
     var demoModel: [[String]] = []
@@ -64,7 +59,6 @@ class MyETDataTableViewController: ETDataTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(MyCell.self, forCellReuseIdentifier: "cell")
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
         tableView.contentInsetAdjustmentBehavior = .never
     }
 
@@ -86,10 +80,9 @@ class MyETDataTableViewController: ETDataTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-
 }
 
-// MARK: -
+// MARK: - Index Table
 class MyETIndexTAbleViewcontroller: ETIndexTableViewController {
     var demoModel: [[String]] = []
 
@@ -115,7 +108,7 @@ class MyETIndexTAbleViewcontroller: ETIndexTableViewController {
 }
 
 
-// MARK: -
+// MARK: - Cell
 class MyCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

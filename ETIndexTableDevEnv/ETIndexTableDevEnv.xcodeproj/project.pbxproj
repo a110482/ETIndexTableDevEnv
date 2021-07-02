@@ -16,6 +16,7 @@
 		CF4817AD268D8EC6007903D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4817AB268D8EC6007903D7 /* LaunchScreen.storyboard */; };
 		CF4817B5268D8FD3007903D7 /* ETIndexTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4817B4268D8FD3007903D7 /* ETIndexTable.framework */; };
 		CF4817B6268D8FD3007903D7 /* ETIndexTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF4817B4268D8FD3007903D7 /* ETIndexTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF4817BB268E0AF9007903D7 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4817BA268E0AF9007903D7 /* DemoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		CF4817AC268D8EC6007903D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF4817AE268D8EC6007903D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF4817B4268D8FD3007903D7 /* ETIndexTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ETIndexTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF4817BA268E0AF9007903D7 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				CF4817A0268D8EC5007903D7 /* AppDelegate.swift */,
 				CF4817A2268D8EC5007903D7 /* SceneDelegate.swift */,
 				CF4817A4268D8EC5007903D7 /* ViewController.swift */,
+				CF4817BA268E0AF9007903D7 /* DemoModel.swift */,
 				CF4817A6268D8EC5007903D7 /* Main.storyboard */,
 				CF4817A9268D8EC6007903D7 /* Assets.xcassets */,
 				CF4817AB268D8EC6007903D7 /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4817BB268E0AF9007903D7 /* DemoModel.swift in Sources */,
 				CF4817A5268D8EC5007903D7 /* ViewController.swift in Sources */,
 				CF4817A1268D8EC5007903D7 /* AppDelegate.swift in Sources */,
 				CF4817A3268D8EC5007903D7 /* SceneDelegate.swift in Sources */,
